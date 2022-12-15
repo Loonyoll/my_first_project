@@ -1,0 +1,639 @@
+
+		    @font-face
+			{
+				font-family: CimeroPro;
+				src: url("fonts/CimeroPro.otf");
+				font-style: normal;
+				font-weight: normal;
+			}
+			@font-face
+			{
+				font-family: NeutralFace;
+				src: url("fonts/NeutralFace.otf");
+				font-style: normal;
+				font-weight: normal;
+			}
+			h1,h5,h3,h4,h6,h2
+			{
+				font-family: "CimeroPro";
+			}
+			body
+			{
+				margin: 0px auto;
+				font-family: Fruktur;
+
+
+			}
+			nav a
+			{
+				font-size: 15px;
+				font-weight: 500;
+				margin-right: 20px;
+				color: rgba(19, 9, 47, 0.69);
+				text-decoration: none;
+				letter-spacing: 2px;				
+
+			}
+			nav
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.navigation
+			{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				margin-left: 20px;
+				height: 75px;
+				width: 350px;
+			}
+			.phonetop 
+			{
+				margin-right: 20px;
+				margin-left: 15px;
+				font-size: 16px;
+				font-family: "CimeroPro";
+				color: rgba(19, 9, 47, 0.69);
+				text-decoration: none;
+				letter-spacing: 1px;
+
+
+			}
+			.phonetop:hover
+			{
+				border-bottom: 1px solid black;
+			}
+			.phonebottom
+			{
+				margin-right: 20px;
+				margin-left: 15px;
+				font-size: 15px;
+				font-family: "CimeroPro";
+				color: black;
+				text-decoration: none;
+				transition-duration: 0.7s;
+			}
+			.phonebottom:hover
+			{
+				color: rgba(131, 83, 10, 1);
+			}
+
+			.order-call
+			{
+				box-sizing: border-box;
+				border: none;
+				border-radius: 15px;
+				background-color: rgba(243, 194, 66, 0.76);
+				box-shadow: 4px 4px 0px rgba(158, 78, 4, 0.25);
+				padding: 15px 20px;
+				font-size: 13px;
+				color: rgba(255, 255, 255, 0.76);
+				font-family: CimeroPro;
+				letter-spacing: 1px;
+			
+
+			}
+			.order-call:hover
+			{
+				background-color: rgba(184, 140, 27, 0.51);
+
+			}
+			.phone-container
+			{
+				display: flex;
+				align-items: center;
+				margin-right: 50px;
+
+			}
+			.phone_icon
+			{
+				height: 20px;
+				width: 20px;
+			}
+			.phone_icon img
+			{
+				height: 20px;
+				width: 20px;
+			}
+
+			.readme
+			{
+				border: none;
+				box-sizing: border-box;
+				border-radius: 20px;
+				background-color:rgba(176, 126, 255, 0.58);
+				text-shadow: 1px 1px 5px #000;
+				box-shadow: inset -2px -2px 5px #E1A1FF;
+				transition-duration: 1s;
+				padding: 12px 77px;
+				cursor: pointer;
+				outline: none;
+				color: rgba(248, 245, 255, 0.95);
+				font-size: 14px;
+				font-family: CimeroPro;
+				letter-spacing: 1px;
+
+
+
+			}
+			.readme:hover
+			{
+				background-color:#B07EFF;
+				color: white;
+				box-shadow: 0 0 5px 2px #B07EFF;
+				text-shadow: 3px 3px 4px white;	
+			}
+
+			.menuone
+			{
+				
+				height: 750px;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				background-image: url(yellowrepair_menuone.jpg);
+				background-repeat:no-repeat;
+				background-size: cover;
+				box-shadow: 0px 1px 10px black;
+
+			}
+			.text_item1
+			{
+				display: flex;
+				align-items: center;
+				height: 700px;
+				width: 100%;
+
+			}
+			.menu_text1{
+				display: flex;
+				height: 100px;
+				width: 400px;
+				padding-left: 50px;
+				padding-bottom: 200px;
+			}
+			.menu_text2
+			{
+				display: flex;
+				height: 100px;
+				width: 40%;
+				margin-left: 100px;
+				padding-left: 70px;
+				padding-bottom: 200px;
+			}
+			.button_text
+			{
+				color: rgba(245, 244, 221, 0.85);
+				margin-right: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-top: 3px;
+				padding-right: 2px;
+				font-size: 22px;
+				height: 40px;
+				width: 40px;
+				background-color: rgba(242, 213, 125, 0.81);
+				box-sizing: border-box;
+				border: none;
+				border-radius: 7px;
+				box-shadow: 2px 2px 5px rgba(232, 214, 160, 0.81);
+			}
+			.head
+			{
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: 100px;
+			}
+			.logo_menu
+			{
+				height: 50px;
+				width: 100px;
+				margin-left: 50px;
+				margin-top: 10px;
+			}
+			.logo_menu img
+			{
+				height: 60px;
+			}
+			.menutwo
+			{
+				height: 500px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-left: 20px;
+				
+			}
+			.menutwobar
+			{	height: 400px;
+				display: flex;
+				justify-content: center;
+				margin-bottom: 20px;
+
+			}
+			.menutwobar
+			{
+				display: flex;
+				justify-content: space-between;
+				overflow-x: auto;
+				width: 500px;
+				margin: 50px auto;
+				scroll-snap-type: x mandatory;
+
+			}
+			.menutwobar img
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex: 0 0 300px;
+				height: 300px;
+			    font-size: 50px;
+				scroll-snap-align: center;
+				margin-right: 20px;
+			}
+			body *::-webkit-scrollbar 
+			{
+				height: 13px;
+				width: 13px;
+			}
+			body *::-webkit-scrollbar-track
+			 {
+			    background: rgba(151, 164, 167, 0.4);
+			    border-radius: 10px;
+			    box-shadow: inset 1px 1px 4px rgba(151, 164, 167, 0.92);
+			}
+			body *::-webkit-scrollbar-thumb
+			 {
+				  background-color: #FFBAA3;
+				  border-radius: 10px;
+				 
+			}
+			
+			/*.menutwobar img
+			{
+				height: 400px;
+				margin-right: 70px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}*/
+			.menutwobartext
+			{
+				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 40px;
+				width: 500px;
+				font-size: 15px;
+				margin-top: 18px;
+				font-family: "CimeroPro";
+				letter-spacing: 5px;
+				border-bottom: 2px solid black;
+
+			}
+			
+			.cost
+			{
+				border: 1px solid #000000;
+				box-sizing: border-box;
+				border-radius: 11px;
+				padding: 10px 22px;
+				cursor: pointer;
+
+			}
+
+			.menuthree
+			{
+				height: 300px;
+				width: 100%;
+				background-color: rgba(202, 176, 255, 0.76);
+				background-repeat: no-repeat;
+			}	
+			.menuthreetext
+			{
+				color: rgba(26, 21, 37, 0.83);
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				padding-left: 10px;
+				padding-bottom: 5px;
+				padding-top: 5px;
+				align-items: center;
+				letter-spacing: 3px;
+			}
+			.menufour
+			{
+				height: 500px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+			}
+			.menufour_text_1
+			{
+				height: 500px;
+				width: 500px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				padding-left: 10px;
+				letter-spacing: 2px;
+			}
+			.menufour_text_1:hover
+			{
+				transition-duration: 0.6s;
+				box-shadow: 2px 2px 5px #A3A399;
+				font-size: 25px;
+
+			}
+			.menufour_text_2
+			{
+				height: 500px;
+				width: 500px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding-left: 10px;
+				letter-spacing: 2px;
+				background-color: #FFCEBD;/*A75F5F - сверху блока*/
+			}
+			.menufour_text_2:hover
+			{
+				transition-duration: 0.6s;
+				box-shadow: 2px 2px 5px #A3A399;
+				font-size: 25px;
+
+			}
+			.menufour_text_3
+			{
+				height: 500px;
+				width: 500px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+				padding-left: 10px;
+				letter-spacing: 2px;
+				padding-right: 10px;
+			}
+			.menufour_text_3:hover
+			{
+				transition-duration: 0.6s;
+				box-shadow: 2px 2px 5px #A3A399;
+				font-size: 25px;
+
+			}
+			.basement
+			{
+				background-color: rgba(253, 130, 17, 0.03);
+				height: 250px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.information 
+			{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 150px;
+				width: 500px;
+			}
+			.mobile
+			{
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-end;
+				height: 250px;
+				width: 120px;
+			}
+
+			.mobilebutton
+			{	
+				height: 85px;
+			}
+			.mobilebutton:hover
+			{
+				cursor: pointer;
+
+			}
+			.mobilediv
+			{
+				height: 70px;
+				width: 70px;
+				padding-left: 8px;
+				padding-bottom: 8px;
+			}
+			.mobilediv img
+			{
+				height: 70px;
+			
+			}
+			
+
+			.sheet-information
+			{
+				letter-spacing: 3px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+				padding-left: 20px;
+			}
+			/*.b-image
+			{
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				height: 600px;
+				width: 500px;
+				background-repeat: no-repeat;
+				background-size:cover;
+				
+			}
+			.b-image img
+			{
+				width: 160px;
+				height: 160px;
+				opacity: 0.6;
+			}*/
+			
+			.informationbas
+			{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin-right: 100px;
+
+
+			}
+			.link
+			{
+				text-decoration: none;
+				color: black;
+				transition-duration: 0.5s;
+			}
+			.link:hover
+			{
+				color: rgba(131, 83, 10, 1);
+
+			}
+
+			.linkcont
+			{
+				font-size: 18px;
+				border-top: 2px solid black;
+			}
+			.vkinst
+			{
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-start;
+				margin-bottom: 10px;
+				margin-top: 45px;
+
+			}
+			.logo img
+			{	
+				height: 35px;
+				width: 35px;
+			}
+
+			.logo
+			{
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+			.popup-container
+			{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				display: none;	
+				background-color: #8bbfceba;
+				justify-content: center;
+				align-items: center;
+
+			}
+			.popup
+			{
+				letter-spacing: 2px;
+				min-width: 250px;
+				min-height: 300px;
+				display: flex;
+				flex-direction: column;
+				background-color: white;
+				border-radius: 15px;
+				align-items: center;
+				padding: 7px;
+
+				/*z-index: 100 - наложение html элементов друг на друга*/
+
+			}
+			.popup-fields
+			{
+				border-spacing: 2px;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 5px;
+              	align-items:center;
+			
+
+			}
+			.popup-fields-1
+			{
+				display: flex;
+				flex-direction: column;
+				border-bottom: 2px solid black;
+			}
+
+			.buttonsend
+			{
+				margin-top: 10px;
+				background-color: #8ae1e2;
+				border-radius: 15px;
+				padding: 10px 20px;
+				font-family:"CimeroPro";
+				font-size: 15px;
+				letter-spacing: 2px;
+
+			}
+			.close-icon
+			{
+				width: 40px;
+				height: 40px;
+				background-image: url(closed.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				margin-left: 200px;
+				/*Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. Когда значение свойства float равно none, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той же линии, что и сам элемент.*/
+			}
+
+			.placeholdercl /*.popup-fields input{}*/
+			{
+				font-family: "CimeroPro";
+				font-size: 13px;
+				letter-spacing: 2px;
+				padding: 6px;
+				margin-bottom: 7px;
+				border-radius: 5px;
+				border: 1px solid black;
+			}
+			.placeholdercl:hover
+			{
+				background-color: #8ae1e2;
+			}
+			#buttonsendid
+			{
+
+			}
+			/*.navigation_box_1
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;	
+				height: 35px;
+				width: 100px;
+				margin-left: 5px;
+				box-sizing: border-box;
+				padding-left: 25px;
+				border-radius: 20px;
+				background-color: rgba(173, 202, 244, 0.37);
+
+			}
+			.navigation_box_1:hover
+			{
+				background-color: rgba(19, 9, 47, 0.69);
+				transition-duration: 0.7s;
+			}
+			.navigation_box_2:hover
+			{
+				background-color: rgba(19, 9, 47, 0.69);
+				transition-duration: 0.7s;
+			}
+			.navigation_box_2
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;	
+				height: 35px;
+				width: 110px;
+				margin-left: 5px;
+				box-sizing: border-box;
+				padding-left: 20px;
+				border-radius: 20px;
+				background-color: rgba(173, 202, 244, 0.37);
+
+			}*/

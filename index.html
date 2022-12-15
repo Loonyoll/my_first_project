@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Official site</title>
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&family=Qahiri&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href = "main_style.css" type = "text/css">
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type = "text/javascript">
+
+			$(function()
+			{
+				/*$('.sectiontwo_item').on('click', function()
+					{
+
+					});*/
+
+				$('button').on('click', function()
+				{
+					$('.popup-container').css('display','flex'); 
+				});
+				$('.close-icon').on('click', function()
+					{
+						$('.popup-container').css('display','none');
+					}); 
+				$('#buttonsendid').on('click', function()
+				{
+					let data = {
+						'name': $('#name').val(),
+						'phone': $('#phone').val(),
+						'email' : $('#email').val()
+					};
+					$.post('form.php', data, function(response)
+					{
+						alert('Ваш запрос обрабатывется');
+					});
+				});
+				$('.mobilebutton').on('click', function()
+				{
+					$('.popup-container').css('display','flex'); 
+				});
+				$('.close-icon').on('click', function()
+					{
+						$('.popup-container').css('display','none');
+					}); 
+				
+			});
+			
+
+			$(document).ready(function()
+			{
+				 $('[href^="#"]').on('click', function(event)
+				 {
+				      if ($(this).attr('hash') !== "") 
+				      {
+				      event.preventDefault();
+				      let hash = $(this).prop('hash');
+				      $('html, body').animate(
+				      {
+				        scrollTop: $(hash).offset().top
+				      }, 800, function(){
+				      });
+				    }
+				  });
+			});
+
+
+		</script>
+		<script src = "slick.min.js"></script>
+		<script src = "script.js"></script>
+
+ 
+	</head>
+
+
+	<body>
+		<!--
+			position:fixed;-изображение позиционируется относительно верхнего левого края поверх остальных 
+		-->
+		<div class = "question_box">
+			<div class = question><img src = "question.png"></div>
+		</div>
+
+		<div class = "image_container_1">
+				<div class = "image_slider_1">
+					<img src = "item1_main.jpg" alt = "">
+				</div>
+		</div>
+
+		<div class = "image_container_2">
+				<div class = "image_slider_2">
+					<img src = "item2_main.jpg" alt = "">
+				</div>
+		</div>
+
+		<div class = "image_container_3">
+				<div class = "image_slider_3">
+					<img src = "item3_main.jpg" alt = "">
+				</div>
+		</div>
+
+		<div class = "image_container_4">
+				<div class = "image_slider_4">
+					<img src = "item4_main.jpg" alt = "">
+				</div>
+		</div>
+
+		<div class = "image_container_5">
+				<div class = "image_slider_5">
+					<img src = "item5_main.jpg" alt = "">
+				</div>
+		</div>
+
+		<div class = "popup-container">
+			<div class = "popup">
+				<a href = "#" class = "close-icon"></a>
+				<h3>Отправка заявки</h3>
+					<form class = "popup-fields" method = "POST" action = "form.php">
+						<div class = "popup-fields-1"><input type="text" placeholder = "*Ваше имя" name = "user_name" id = "user_name" class = "placeholdercl" required="true">
+						<input type="text" placeholder = "*Номер телефона" name = "user_phone" id = "user_phone" class = "placeholdercl" required="true">
+						<input type="email" placeholder = "Электронная почта" name = "user_email" id = "user_email" class = "placeholdercl"></div>
+						<div class = "popup-fields-2"><input type="submit" name = "Отправить заявку" class = "buttonsend" id = "buttonsendid"></div>
+					</form>
+				
+
+			</div>
+		</div>
+
+		<header>
+			<!--<nav class = "navigation">
+				<div class = "navigation_box_1"><h5><a href = "#menuthreetext">Услуги</a></h5></div>
+				<div class = "navigation_box_2"><h5><a href = "#">Стоимость</a></h5></div>
+			</nav>-->
+			<div class = "header_logo"><img src = "logo_icon.png" alt = "Просим прощения, картинка улетела в Ирак...">
+				<div class = "header_text"><h6>Magnificent Tilers</h6></div>
+			</div>
+			<div class = "phone-container">
+				<!--<nav>
+					<div class = "navigation_box">
+						<a href = "#menuthreetext">Услуги</a>
+					</div>
+				</nav>-->
+				<div class = "phone_item"><img src = "phoneicon.png"><a class = "phonetop" href ="#"><h3>+7(928)136-40-36</h3></a></div>
+				<button class = "order-call"><h3>Заказать звонок</h3></button>
+			</div>	
+		</header>
+
+			<section class = "menuone">
+				<div class = "first_section">
+
+					<div class = "firstsection_text_1block">
+						<div class = "firstsection_text_1"><h1>Укладка плитки</h1></div>
+						<div class = "firstsection_text_1"><h1>В Ростове-на-дону &</h1></div>
+						<div class = "firstsection_text_1"><h1>Ростовской области</h1></div>
+					</div>
+
+					<div class = "firstsection_text_2block">
+						<div class = "firstsection_text_2"><h2>Выезжаем на замер в день обращения</h2></div>
+						<div class = "firstsection_text_2"><h2>Всегда заботимся о порядке</h2></div>
+					</div>
+					<div class = "firstsection_text_3"><h3>Рады вас приветствовать</h3></div>
+					<div><button class = "new_readme"><h3>Узнать больше</h3></button></div>
+				</div>
+
+				
+				<div class = "second_section">
+					<div class = "second_section_part1"><!-- height 100% width 350px-->
+						<div class ="second_section_sheet"><!--height 265px-->
+							<div class = "sheetstring_1">
+								<div class = "sheetstring_1_top">
+									<div class = "sheetstring_logo1">
+										<img src = "pencil.png">
+									</div>
+									<div class = "sheetstring_1_toptext"><h4>Мы поможем вам</h4></div>
+								</div>
+								<div class = "sheetstring_1_bottomtext"><h4>с закупкой материалов</h4></div>
+							</div>
+
+							<div class = "sheetstring_2">
+									<div class = "sheetstring_logo2"><img src = "megaphone.png"></div>
+									<div class = "sheetstring_2_text"><h4>Выезд и оценка бесплатны</h4></div>
+							</div>
+
+							<div class = "sheetstring_3">
+								<div class = "sheetstring_3_top">
+									<div class = "sheetstring_logo3"><img src = "putty-knife.png"></div>
+									<div class = "sheetstring_3_toptext"><h4>Возможно выполнение</h4></div>
+								</div>
+								<div class = "sheetstring_3_bottomtext"><h4>подготовительных работ</h4></div>
+							</div>
+
+							<div class = "sheetstring_4">
+									<div class = "sheetstring_logo4"><img src = "guarantee.png"></div>
+									<div class = "sheetstring_4_text"><h4>Гарантия на 3 года</h4></div>	
+							</div>
+						</div>
+					</div>
+
+					<div class ="second_section_image">
+						
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class = "menuone_version2">
+				<div class = "menuone_section1">
+
+					<div class = "menuone_string1">
+						<div class = "string1_icon1"><img src = "string1_icon1.png"></div>
+						<div class = "string1_text">
+							<div class = "string1_texttop"><h2>Работаем строго по технологии</h2></div>
+							<div class = "string1_textbottom"><h4>с профессиональным оборудованием</h4></div>
+						</div>
+					</div>
+
+					<div class = "menuone_string2">
+						<div class = "string2_text"><h2>Работаем без посредников</h2></div>
+						<div class = "string2_icon2"><img src = "string2_icon2.png"></div>
+					</div>
+
+					<div class = "menuone_string3">
+						<div class = "string3_icon3"><img src = "string3_icon3.png"></div>
+						<div class = "string3_text"><h2>Все сотрудники граждане РФ</h2></div>
+					</div>
+
+				</div>
+
+				<div class = "menuone_section2">
+				
+				</div>
+				
+			</section>
+				
+
+			<section class = "menutwo">
+
+				<!--<div class = "slider_big">
+					
+					<div class = "sliderbig_item">
+						<img src = "awall.jpg" alt = "">
+					</div>
+
+					<div class = "sliderbig_item">
+						<img src = "img2main.png" alt = "">
+					</div>
+
+					<div class = "sliderbig_item">
+						<img src = "img3main.png" alt = "">
+					</div>
+
+				</div>-->
+
+				<div class = "slider_box">
+
+						<div class = "slider">
+
+							<div class = "slider_item" id = "slider_item1">
+								<img data-lazy = "item1.png" alt = "">
+							</div>
+
+							<div class = "slider_item" id = "slider_item2">
+								<img data-lazy = "item2.png" alt = "">
+							</div>
+
+							<div class = "slider_item" id = "slider_item3">
+								<img data-lazy = "item3.png" alt = "">
+							</div>
+
+							<div class = "slider_item" id = "slider_item4">
+								<img data-lazy = "item4.png" alt = "">
+							</div>
+
+							<div class = "slider_item" id = "slider_item5">
+								<img data-lazy = "item5.png" alt = "">
+							</div>
+
+						</div>
+				</div>
+				
+			</section>
+
+			<script>
+				$('#slider_item1').on('click',function () 
+				{
+
+					$('.image_container_1').css('display','flex');
+
+				});
+				$('.image_container_1').on('click',function()
+				{
+					$('.image_container_1').css('display','none');
+				});
+
+			</script>
+			<script>
+				$('#slider_item2').on('click',function () 
+				{
+
+					$('.image_container_2').css('display','flex');
+
+				});
+				$('.image_container_2').on('click',function()
+				{
+					$('.image_container_2').css('display','none');
+				});
+			</script>
+			<script>
+					$('#slider_item3').on('click',function () 
+				{
+
+					$('.image_container_3').css('display','flex');
+
+				});
+				$('.image_container_3').on('click',function()
+				{
+					$('.image_container_3').css('display','none');
+				});
+			</script>
+			<script>
+				$('#slider_item4').on('click',function () 
+				{
+
+					$('.image_container_4').css('display','flex');
+
+				});
+				$('.image_container_4').on('click',function()
+				{
+					$('.image_container_4').css('display','none');
+				});
+
+			</script>
+			<script>		
+				$('#slider_item5').on('click',function () 
+				{
+
+					$('.image_container_5').css('display','flex');
+
+				});
+				$('.image_container_5').on('click',function()
+				{
+					$('.image_container_5').css('display','none');
+				});
+			</script>
+
+
+			<section class = "menuthree">
+				<div class = "menuthree_centerbox">
+					<div class = "menuthree_title_text"><h2>Доверьте всю работу проффесионалам</h2></div>
+					<div class = "title_2_item">
+						<img src = "Title_2_item.png">
+					</div>
+				</div>
+
+			</section>
+
+			<section class = "menufive">
+				<div class = "menufive_firstsection">
+					<div class = "menufive_title"><img src = "menufive_title.png"></div>
+					<div class = "menufive_icons">
+						<div class = "icons_1"><img src = "icons_1.png"></div>
+						<div class = "icons_2"><img src = "icons_2.png"></div>
+					</div>
+				</div>
+				<div class = "menufive_secontsection">
+					<div class = "menufive_send">
+						<div class = "send_text"><h3>Заявка</h3></div>
+						<div><button class = "send">Отправить</button></div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class = "menufour">
+
+				<div class = "menufour_text_1">
+					
+					
+				</div>
+				<div class = "menufour_text_2">
+					<h4>•Выезд и оценка бесплатны</h4>
+					<h4>•Поддерживаем чистоту на рабочем месте</h4>
+					<h4>•Работаем с физическими и юрдидическими лицами</h4>
+					<h4>•Наличный и безналичный расчёт</h4>
+					<h4>•Оплата поэтапная</h4>
+				</div>
+				<div class = "menufour_text_3">
+			
+				</div>
+				
+			</section>
+
+
+			<section class = "basement">
+
+				<div class = "mobile">
+					<div class = "mobilediv"><img src = "mobile.png" class = "mobilebutton"></div>
+				</div>
+
+
+				<div class = "informationbas">
+					<small><h1>Контакты</h1></small>
+					<div class = "linkcont"><a class = "link" href="#"><h4>potyavin@yandex.ru</h4></a></div>
+					<a class = "phonebottom" href = "#"><h4>+ 7 (928) 136-40-36</h4></a>
+					<div class = "vkinst">
+					<div class = "logo"><a href = "https://vk.com/id137967632" target = "_blank"><img src = "vklogo.png" ></a></div>
+					<div class = "logo"><a href = "https://www.instagram.com/potyavin_a.m.8/" target = "_blank"><img src = "instlogo.png" ></a></div>
+				</div>
+				</div>
+			</section>
+
+			
+		
+	</body>
+</html>

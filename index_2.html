@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Official site</title>
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&family=Qahiri&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href = "style.css" type = "text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type = "text/javascript">
+			$(function()
+			{
+				/*$('.sectiontwo_item').on('click', function()
+					{
+
+					});*/
+
+				$('button').on('click', function()
+				{
+					$('.popup-container').css('display','flex'); 
+				});
+				$('.close-icon').on('click', function()
+					{
+						$('.popup-container').css('display','none');
+					}); 
+				$('#buttonsendid').on('click', function()
+				{
+					let data = {
+						'name': $('#name').val(),
+						'phone': $('#phone').val(),
+						'email' : $('#email').val()
+					};
+					$.post('form.php', data, function(response)
+					{
+						alert('Ваш запрос обрабатывется');
+					});
+				});
+				$('.mobilebutton').on('click', function()
+				{
+					$('.popup-container').css('display','flex'); 
+				});
+				$('.close-icon').on('click', function()
+					{
+						$('.popup-container').css('display','none');
+					}); 
+				
+			});
+			
+
+			$(document).ready(function()
+			{
+				 $('[href^="#"]').on('click', function(event)
+				 {
+				      if ($(this).attr('hash') !== "") 
+				      {
+				      event.preventDefault();
+				      let hash = $(this).prop('hash');
+				      $('html, body').animate(
+				      {
+				        scrollTop: $(hash).offset().top
+				      }, 800, function(){
+				      });
+				    }
+				  });
+			});
+
+
+		</script>
+
+	</head>
+
+
+	<body>
+		<!--
+			position:fixed;-изображение позиционируется относительно верхнего левого края поверх остальных 
+		-->
+		<div class = "popup-container">
+			<div class = "popup">
+				<a href = "#" class = "close-icon"></a>
+				<h3>Отправка заявки</h3>
+					<form class = "popup-fields" method = "POST" action = "form.php">
+						<div class = "popup-fields-1"><input type="text" placeholder = "Ваше имя" name = "user_name" id = "user_name" class = "placeholdercl" required="true">
+						<input type="text" placeholder = "Номер телефона" name = "user_phone" id = "user_phone" class = "placeholdercl" required="true">
+						<input type="email" placeholder = "Электронная почта" name = "user_email" id = "user_email" class = "placeholdercl"></div>
+						<div class = "popup-fields-2"><input type="submit" name = "Отправить заявку" class = "buttonsend" id = "buttonsendid"></div>
+					</form>
+				
+
+			</div>
+		</div>
+
+		<!--<header>
+			<nav class = "navigation">
+				<div class = "navigation_box_1"><h5><a href = "#menuthreetext">Услуги</a></h5></div>
+				<div class = "navigation_box_2"><h5><a href = "#">Стоимость</a></h5></div>
+			</nav>
+
+
+			<div class = "header_logo"><img src = "Ellipse 6.png" alt = "Просим прощения, картинка улетела в Ирак..."></div>
+			<div class = "phone-container">
+				
+				<a class = "phonetop" href ="#">+7(928)136-40-36</a>
+				<button class = "order-call">Заказать звонок</button>
+			</div>	
+		</header>-->
+
+			<section class = "menuone">
+
+				<header class = "head">
+					<div class = "logo_menu"><img src = "logo_text.png"></div>
+					<div class="phone-container">
+
+						<nav><div class = "phone_icon"><img src = "phoneicon.png"></div>
+							<a class = "phonetop" href ="#">+7(928)136-40-36</a></nav>
+						<button class = "order-call">Заказать звонок</button>
+					</div>
+				</header>
+				<div class = "text_item1">
+						<div>
+							<div class = "menu_text1">
+								<div class = "button_text"><h6>У</h6></div>
+								<div class = "button_text"><h6>К</h6></div>
+								<div class = "button_text"><h6>Л</h6></div>
+								<div class = "button_text"><h6>А</h6></div>
+								<div class = "button_text"><h6>Д</h6></div>
+								<div class = "button_text"><h6>К</h6></div>
+								<div class = "button_text"><h6>А</h6></div>
+							</div>
+							<div>
+								
+							</div>
+
+						</div>
+						<div class = "menu_text2">
+							<div class = "button_text"><h6>П</h6></div>
+							<div class = "button_text"><h6>Л</h6></div>
+							<div class = "button_text"><h6>И</h6></div>
+							<div class = "button_text"><h6>Т</h6></div>
+							<div class = "button_text"><h6>К </h6></div>
+							<div class = "button_text"><h6>И</h6></div>
+							
+						</div>
+				</div>
+
+				<div class = "sheet-information">
+					<!--<h2 class = "text_body">Андрей Потявин</h2>
+					<big><h1 class = "text_body">Укладываем плитку</h1></big>-->
+					<!--<div class = "imgpot">
+						<img src = "informpot1.png">
+					</div>-->	
+					<button class = "readme">Узнать больше</button>
+				</div>
+				<!--<div class = "b-image"><div class = "border"><img src = "Ellipse 6.png" alt = "Просим прощения, картинка улетела в Ирак..."></div></div>-->
+			</section>
+
+			<section class = "menutwo">
+				<div class = "menutwobartext">Наше портфолио</div>
+				<div class = "menutwobar">
+					<!--<big><big><em>Укладываем плитку в Ростове-на-дону и Ростовской 	области.</em></big></big>
+					<big><em>•Большой опыт работы частной бригады - свыше 10 лет.</em></big>
+					<big><em>•Поддерживаем частоту на рабочем месте.</em></big>
+					<big><h5>•Выезжаем на замер в день обращения.</h5></big>
+					<big><h5>•Выезд и оценка бесплатны.</h5></big>-->
+					<div class = "sectiontwo_item"><img src = "img1.png"></div>
+					<div class = "sectiontwo_item"><img src = "img3.png"></div>
+					<div class = "sectiontwo_item"><img src = "img2.png"></div>
+				</div>
+
+				
+			</section>
+					
+			<section class = "menuthree" id = "menuthreetext">
+				<div class= "menuthreetext">
+					<h3>Укладываем плитку в Ростове-на-дону и Ростовской области</h3>
+					<h4>-Большой опыт частной бригады - свыше 10 лет</h4>
+					<h4>-Всегда поддерживаем чистоту на рабочем месте</h4>
+					<h4>-Выезжаем на замер в день обращения</h4>
+					<h4>-Выезд и оценка бесплатны</h4>
+					
+				</div>
+				
+			</section>
+
+			<section class = "menufour">
+
+				<div class = "menufour_text_1">
+					<h6>•Опыт работы нашей бригады свыше десяти лет</h6>
+					<h6>•Поможем вам с закупкой материалов</h6>
+					<h6>•Работаем с профессиональным оборудованием</h6>
+					<h6>•Работаем точно в срок</h6>
+					<h6>•У нас низкие цены по региону</h6>
+					
+				</div>
+				<div class = "menufour_text_2">
+					<h6>•Работаем над заказами любой сложности</h6>
+					<h6>•Возможно выполнение подготовительных работ</h6>
+					<h6>•Даём гарантию на 3 года</h6>
+					<h6>•Оплата поэтапная</h6>
+					<h6>•Работаем строго по технологии</h6>
+				</div>
+				<div class = "menufour_text_3">
+					<h6>•Работаем без посредников</h6>
+					<h6>•Всегда поддерживаем чистоту на месте</h6>
+					<h6>•Звоните нам в любое время</h6>
+					<h6>•Делаем гидроизоляцию,стяжку,полки,коробы</h6>
+					<h6>•Работаем с физическими и юридическими лицами</h6>
+				</div>
+				
+			</section>
+
+			<section class = "basement">
+
+				<div class = "mobile">
+					<div class = "mobilediv"><img src = "mobile.png" class = "mobilebutton"></div>
+				</div>
+
+
+				<div class = "informationbas">
+					<small><h1>Контакты</h1></small>
+					<div class = "linkcont"><a class = "link" href="#"><h5>potyavin@yandex.ru</h5></a></div>
+					<a class = "phonebottom" href = "#">+ 7 (928) 136-40-36</a>
+					<div class = "vkinst">
+					<div class = "logo"><a href = "https://vk.com/id137967632" target = "_blank"><img src = "vklogo.png" ></a></div>
+					<div class = "logo"><a href = "https://www.instagram.com/potyavin_a.m.8/" target = "_blank"><img src = "instlogo.png" ></a></div>
+				</div>
+				</div>
+			</section>
+
+			
+		
+	</body>
+</html>
